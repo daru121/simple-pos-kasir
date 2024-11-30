@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimplePOS - Laporan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/laporan.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-container">
+            <h4 class="text-center py-4 m-0">Pedagang<span class="text-light">Aksesoris</span></h4>
+        </div>
+        
+        <div class="profile">
+            <div class="d-flex align-items-center gap-3">
+                <div class="profile-img">
+                    <img src="https://awsimages.detik.net.id/community/media/visual/2017/06/22/c5f6a4b7-d06e-4512-b239-0b7d4d31714e_11.jpg?w=600&q=90" alt="Profile">
+                </div>
+                <div>
+                    <h6 class="mb-0">Daru Caraka</h6>
+                    <small class="online-status">● Online</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-header">MAIN NAVIGATION</div>
+        
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="#">
+                <i class="bi bi-speedometer2"></i> 
+                <span>DASHBOARD</span>
+            </a>
+            
+            <div class="nav-item">
+                <a class="nav-link has-arrow" href="#" data-bs-toggle="collapse" data-bs-target="#masterDataCollapse">
+                    <i class="bi bi-database"></i>
+                    <span>MASTER DATA</span>
+                    <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <div class="collapse" id="masterDataCollapse">
+                    <div class="submenu">
+                        <a class="nav-link" href="../pages/kategori.html"><i class="bi bi-tags"></i> KATEGORI</a>
+                        <a class="nav-link" href="../pages/barang.html"><i class="bi bi-box"></i> BARANG</a>
+                        <a class="nav-link" href="../pages/operator.html"><i class="bi bi-person"></i> OPERATOR</a>
+                        <a class="nav-link" href="../pages/stok.html"><i class="bi bi-box-seam"></i> STOK</a>
+                    </div>
+                </div>
+            </div>
+            
+            <a class="nav-link" href="../pages/penjualan.html"><i class="bi bi-cart"></i> PENJUALAN</a>
+            <a class="nav-link" href="../pages/laporan.html"><i class="bi bi-file-text"></i> LAPORAN</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="top-navbar">
+            <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-link text-light" id="sidebarToggle">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+                <div class="user-profile">
+                    <span>Daru Caraka</span>
+                    <img src="https://awsimages.detik.net.id/community/media/visual/2017/06/22/c5f6a4b7-d06e-4512-b239-0b7d4d31714e_11.jpg?w=600&q=90" alt="Profile" class="rounded-circle">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="container-fluid">
+                <!-- Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Laporan Penjualan</h2>
+                </div>
+        
+                <!-- Report Tabs -->
+                <ul class="nav nav-tabs mb-4" id="reportTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active text-dark" id="daily-tab" data-bs-toggle="tab" data-bs-target="#daily" type="button" role="tab">
+                            <i class="bi bi-calendar-day me-2"></i>Laporan Harian
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-dark" id="monthly-tab" data-bs-toggle="tab" data-bs-target="#monthly" type="button" role="tab">
+                            <i class="bi bi-calendar-month me-2"></i>Laporan Bulanan
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-dark" id="yearly-tab" data-bs-toggle="tab" data-bs-target="#yearly" type="button" role="tab">
+                            <i class="bi bi-calendar me-2"></i>Laporan Tahunan
+                        </button>
+                    </li>
+                </ul>
+                <!-- Tab Content -->
+                <div class="tab-content" id="reportTabContent">
+                    <!-- Daily Report -->
+                    <div class="tab-pane fade show active" id="daily" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <h5 class="card-title mb-0">Laporan Harian</h5>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex gap-2 justify-content-end">
+                                            <input type="date" class="form-control w-auto">
+                                            <button class="btn btn-primary">
+                                                <i class="bi bi-search me-2"></i>Cari
+                                            </button>
+                                            <button class="btn btn-success">
+                                                <i class="bi bi-file-earmark-excel me-2"></i>Export Excel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Tanggal</th>
+                                                <th>Nama Barang</th>
+                                                <th>Qty</th>
+                                                <th>Harga</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Data will be dynamically added here -->
+                                        </tbody>
+                                        <tfoot>
+                                            <tr class="fw-bold">
+                                                <td colspan="5" class="text-end">Total Penjualan:</td>
+                                                <td>Rp. 0</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Monthly Report -->
+                    <div class="tab-pane fade" id="monthly" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <h5 class="card-title mb-0">Laporan Bulanan</h5>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex gap-2 justify-content-end">
+                                            <select class="form-select w-auto">
+                                                <option value="">Pilih Bulan</option>
+                                                <option value="1">Januari</option>
+                                                <option value="2">Februari</option>
+                                                <!-- Add other months -->
+                                            </select>
+                                            <select class="form-select w-auto">
+                                                <option value="">Pilih Tahun</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2023">2023</option>
+                                            </select>
+                                            <button class="btn btn-primary">
+                                                <i class="bi bi-search me-2"></i>Cari
+                                            </button>
+                                            <button class="btn btn-success">
+                                                <i class="bi bi-file-earmark-excel me-2"></i>Export Excel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Bulan</th>
+                                                <th>Total Transaksi</th>
+                                                <th>Total Penjualan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Data will be dynamically added here -->
+                                        </tbody>
+                                        <tfoot>
+                                            <tr class="fw-bold">
+                                                <td colspan="3" class="text-end">Total:</td>
+                                                <td>Rp. 0</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Yearly Report -->
+                    <div class="tab-pane fade" id="yearly" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <h5 class="card-title mb-0">Laporan Tahunan</h5>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex gap-2 justify-content-end">
+                                            <select class="form-select w-auto">
+                                                <option value="">Pilih Tahun</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2023">2023</option>
+                                            </select>
+                                            <button class="btn btn-primary">
+                                                <i class="bi bi-search me-2"></i>Cari
+                                            </button>
+                                            <button class="btn btn-success">
+                                                <i class="bi bi-file-earmark-excel me-2"></i>Export Excel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Tahun</th>
+                                                <th>Total Transaksi</th>
+                                                <th>Total Penjualan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Data will be dynamically added here -->
+                                        </tbody>
+                                        <tfoot>
+                                            <tr class="fw-bold">
+                                                <td colspan="3" class="text-end">Total:</td>
+                                                <td>Rp. 0</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>
