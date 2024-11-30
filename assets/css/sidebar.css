@@ -1,0 +1,180 @@
+:root {
+    --primary-color: #3d2c8b;      /* Biru-ungu */
+    --secondary-color: #8c8ddc;    /* Ungu muda */
+    --dark-color: #363870;         /* Biru tua */
+    --light-color: #ffffff;
+    --hover-color: #6c6fd1;        /* Ungu medium */
+    --submenu-color: #42447c;      /* Biru gelap untuk submenu */
+    --header-gradient: linear-gradient(135deg, #4e54c8 0%, #8c8ddc 100%);
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background: linear-gradient(180deg, var(--dark-color) 0%, var(--secondary-color) 100%);
+    color: var(--light-color);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+
+/* Tambahkan style untuk sidebar collapsed */
+.sidebar.collapsed {
+    margin-left: -250px;
+}
+
+.logo-container {
+    background-color: rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.profile {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: rgba(0,0,0,0.05);
+}
+
+.profile-img {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.online-status {
+    color: #00ff00;
+}
+
+/* Navigation Styles */
+.nav-header {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    padding: 15px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: var(--light-color) !important;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-link i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: var(--hover-color);
+    color: var(--light-color);
+}
+
+.nav-link.has-arrow {
+    justify-content: space-between;
+}
+
+.nav-link.has-arrow i.bi-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.nav-link[aria-expanded="true"] i.bi-chevron-down {
+    transform: rotate(-180deg);
+}
+
+/* Submenu Styles */
+.submenu {
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px 0;
+}
+
+.submenu .nav-link {
+    padding-left: 50px;
+    font-size: 0.9em;
+}
+
+/* Top Navbar Styles */
+.top-navbar {
+    background-color: var(--primary-color);
+    padding: 15px 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--light-color);
+}
+
+.user-profile img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+/* Update Main Content Area */
+.main-content {
+    margin-left: 250px;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.main-content.expanded {
+    margin-left: 0;
+}
+
+.content-area {
+    padding: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .main-content.active {
+        margin-left: 250px;
+    }
+}
+
+/* Tambahkan style untuk tombol toggle */
+#sidebarToggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+#sidebarToggle:hover {
+    transform: scale(1.1);
+}
