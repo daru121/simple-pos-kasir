@@ -1,0 +1,244 @@
+/* Layout Styles */
+.content-area {
+    padding: 20px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+/* Card Styles */
+.card {
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+/* Product Card */
+.product-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.product-card .card-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .card-text {
+    font-size: 0.8rem;
+}
+
+/* Cart Item Layout */
+.cart-item {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr 1fr 0.5fr;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.cart-item-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.cart-item-qty input {
+    width: 60px !important;
+    padding: 0.25rem;
+    text-align: center;
+}
+
+.cart-item-total {
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+/* Cart Summary */
+.cart-summary {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+/* Payment Section */
+.payment-section {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+}
+
+.payment-section label {
+    font-size: 0.9rem;
+}
+
+.payment-result {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* Badge Styles */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+}
+
+/* Button Styles */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Payment Success Animation Styles */
+.payment-success-details {
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    text-align: left;
+}
+
+.payment-success-details p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+/* SweetAlert Custom Styles */
+.swal2-popup {
+    font-size: 0.9rem !important;
+}
+
+.swal2-title {
+    font-size: 1.5rem !important;
+}
+
+.swal2-html-container {
+    margin: 1rem 0 !important;
+}
+
+.swal2-icon {
+    margin: 1.5rem auto 0.5rem !important;
+}
+
+/* Loading Animation */
+.swal2-loading {
+    margin: 2rem auto !important;
+}
+
+/* Cart Empty State */
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    min-height: 200px;
+    color: #6c757d;
+}
+
+.cart-empty i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffc107; /* Warna kuning untuk icon */
+}
+
+.cart-empty p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Cart Container ketika kosong */
+.cart-table-container:empty {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Transaction Date Styles */
+.transaction-date {
+    min-width: 200px;
+}
+
+.transaction-date .input-group-text {
+    background-color: #f8f9fa;
+    border-right: none;
+    cursor: pointer;
+}
+
+.transaction-date .form-control {
+    background-color: #fff;
+    cursor: pointer;
+    border-left: none;
+}
+
+.transaction-date .form-control:focus {
+    box-shadow: none;
+    border-color: #dee2e6;
+}
+
+/* Hover effect */
+.transaction-date:hover .form-control,
+.transaction-date:hover .input-group-text {
+    border-color: #80bdff;
+}
+
+/* Focus state */
+.transaction-date .form-control:focus,
+.transaction-date .form-control:focus + .input-group-text {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Update card header for date alignment */
+.card-header {
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-title {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+/* Add this to your existing CSS */
+.payment-section input[type="text"] {
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.payment-success-details p:first-child {
+    font-weight: 500;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+} 

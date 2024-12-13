@@ -1,24 +1,136 @@
 .nav-tabs .nav-link {
-    color: #212529 !important; /* Dark text color */
+  color: #212529 !important; /* Dark text color */
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  color: #0d6efd !important; /* Blue color for active tab */
+  font-weight: 600;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #0d6efd !important;
+  border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}
+
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Detail item styling */
+.purchase-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase-item {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    line-height: 1.5;
+}
+
+.item-name {
+    margin-right: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.item-detail {
+    color: #6c757d;
+}
+
+/* Table styling */
+.table {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    padding: 16px;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody td {
+    padding: 16px;
+    vertical-align: middle;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Card enhancements */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Total row styling */
+.table tfoot tr {
+    background-color: #e8f4ff !important;
+}
+
+.table tfoot td {
+    padding: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Date column styling */
+.date-column {
+    white-space: nowrap;
+    color: #6c757d;
     font-weight: 500;
 }
 
 .nav-tabs .nav-link.active {
-    color: #0d6efd !important; /* Blue color for active tab */
-    font-weight: 600;
-    background-color: #fff;
-    border-color: #dee2e6 #dee2e6 #fff;
+    color: #0d6efd;
+    border-bottom-color: #0d6efd;
+    background: transparent;
 }
 
-.nav-tabs .nav-link:hover {
-    color: #0d6efd !important;
-    border-color: #e9ecef #e9ecef #dee2e6;
+.nav-tabs .nav-link:hover:not(.active) {
+    border-bottom-color: #dee2e6;
+    background: transparent;
 }
 
-.table th {
-    background-color: #f8f9fa;
+/* Remove gaps between items */
+.purchase-item + .purchase-item {
+    margin-top: 2px;
 }
 
-.card {
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+/* Total column styling */
+.table td:last-child {
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 500;
+    color: #198754;
 }

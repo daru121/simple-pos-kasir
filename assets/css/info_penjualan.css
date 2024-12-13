@@ -1,0 +1,75 @@
+/* Add these styles for the filter section */
+.card-header .input-group {
+    width: auto;
+}
+
+.card-header .form-control-sm {
+    height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-group-sm .btn {
+    padding: 0.25rem 0.5rem;
+}
+
+.btn-group-sm .btn i {
+    font-size: 0.875rem;
+}
+
+/* Date range picker styles */
+.input-group-text {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+/* Search input styles */
+#searchInput {
+    min-width: 200px;
+} 
+
+/* Checkbox styling */
+.form-check-input {
+    cursor: pointer;
+}
+
+/* Bulk delete button */
+#bulkDeleteBtn {
+    transition: all 0.3s ease;
+}
+
+/* Table hover effect */
+.table tbody tr:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+/* Tambahkan style untuk filter date range */
+.date-range-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.date-range-filter .input-group {
+    width: auto;
+}
+
+.date-range-filter .input-group-text {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    padding: 0.25rem 0.75rem;
+}
+
+.date-range-filter input[type="date"] {
+    width: 140px; /* Set lebar yang sama untuk kedua input tanggal */
+}
+
+/* Search input styles */
+.search-filter {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-filter .input-group {
+    width: auto;
+}
